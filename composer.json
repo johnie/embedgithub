@@ -1,15 +1,15 @@
 {
-    "name": "johnie/embedgithub",
-    "description": "Simply embed Github Readme or Changelog to page or post",
-    "require": {
-        "michelf/php-markdown": "1.4.x-dev"
-    },
+  "name": "johnie/embedgithub",
+  "description": "Simply embed Github Readme or Changelog to page or post",
+  "require": {
+    "michelf/php-markdown": "1.4.x-dev"
+  },
     "license": "MIT",
     "authors": [
-        {
-            "name": "Johnie Hjelm",
-            "email": "johnie.hjelm@symbio.com"
-        }
-    ],
-    "minimum-stability": "dev"
+  {
+    "name": "Johnie Hjelm",
+    "email": "johnie.hjelm@symbio.com"
+  }
+  ],
+  "minimum-stability": "dev"
 }

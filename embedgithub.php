@@ -71,7 +71,7 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
     */
     function __construct() {
 
-
+      
 
     }
 
