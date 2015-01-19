@@ -71,7 +71,7 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
      * @param string $content
      * @return string
      */
-    public function _eg_shortcode_readme( $atts, $html ) {
+    public function _eg_shortcode_readme( $atts ) {
 
       extract( shortcode_atts( array(
         'repo' => 'johnie/embedgithub',
