@@ -73,7 +73,7 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
      */
     public function _eg_shortcode_readme( $atts ) {
 
-      shortcode_atts( array(
+      $atts = shortcode_atts( array(
         'repo' => 'johnie/embedgithub',
         'trim' => 0
       ), $atts );
@@ -93,7 +93,7 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
 
         $json=json_decode( $data );
         $markdown=base64_decode( $json->content );
-        if ( $trim>0 ) {
+        if ( $atts['trim']>0 ) {
           $markdown = implode("\n", array_slice(explode("\n", $markdown), $atts['trim']));
         }
 
