@@ -46,21 +46,21 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
   class EmbedGithub {
 
     /**
-    * Tag identifier used by file includes and selector attributes.
-    * @var string
-    */
+     * Tag identifier used by file includes and selector attributes.
+     * @var string
+     */
     protected $tag = 'embedgithub';
 
     /**
-    * User friendly name used to identify the plugin.
-    * @var string
-    */
+     * User friendly name used to identify the plugin.
+     * @var string
+     */
     protected $name = 'Embed Github';
 
     /**
-    * Current version of the plugin.
-    * @var string
-    */
+     * Current version of the plugin.
+     * @var string
+     */
     protected $version = '0.0.1';
 
     /**
@@ -79,7 +79,7 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
       ), $atts );
 
       $transient="embedgithub_" . $atts['repo'] . "_" . $atts['trim'];
-      if ( false === ( $html = get_transient($transient) ) ) {
+      if ( false === ( $html = get_transient( $transient ) ) ) {
         $url="https://api.github.com/repos/" . $atts['repo'] . "/readme";
 
         $ch = curl_init();
@@ -91,10 +91,11 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
         $data = curl_exec( $ch );
         curl_close( $ch );
 
-        $json=json_decode( $data );
-        $markdown=base64_decode( $json->content );
-        if ( $atts['trim']>0 ) {
-          $markdown = implode("\n", array_slice(explode("\n", $markdown), $atts['trim']));
+        $json = json_decode( $data );
+        $markdown = base64_decode( $json->content );
+
+        if ( $atts['trim'] > 0 ) {
+          $markdown = implode( "\n", array_slice( explode( "\n", $markdown ), $atts['trim'] ) );
         }
 
         $html = Markdown::defaultTransform( $markdown );
@@ -106,11 +107,11 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
     }
 
     /**
-    * Initiate the plugin by setting the default values and assigning any
-    * required actions and filters.
-    *
-    * @access public
-    */
+     * Initiate the plugin by setting the default values and assigning any
+     * required actions and filters.
+     *
+     * @access public
+     */
     function __construct() {
 
       // Add shortcode
