@@ -66,7 +66,6 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
     /**
      * Get github readme
      *
-     * @access public
      * @param array $atts
      * @param string $content
      * @return string
@@ -109,8 +108,6 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
     /**
      * Initiate the plugin by setting the default values and assigning any
      * required actions and filters.
-     *
-     * @access public
      */
     function __construct() {
 
