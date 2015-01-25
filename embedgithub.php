@@ -74,12 +74,18 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
 
       $atts = shortcode_atts( array(
         'repo' => 'johnie/embedgithub',
+        'file' => false,
         'trim' => 0
       ), $atts );
 
-      $transient="embedgithub_" . $atts['repo'] . "_" . $atts['trim'];
+      $transient="embedgithub_" . $atts['repo'] . "_" . $atts['file'] . "_" . $atts['trim'];
       if ( false === ( $html = get_transient( $transient ) ) ) {
-        $url="https://api.github.com/repos/" . $atts['repo'] . "/readme";
+
+        if ( $atts['file'] ) {
+          $url="https://api.github.com/repos/" . $atts['repo'] . "/contents/" . $atts['file'];
+        } else {
+          $url="https://api.github.com/repos/" . $atts['repo'] . "/readme";
+        }
 
         $ch = curl_init();
         $timeout = 5;
