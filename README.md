@@ -1,6 +1,6 @@
 # Embed Github
 
-> Simply embed Github Readme or Changelog to page or post
+> Simply embed Github Readme or any other markdown file to page or post
 
 ## Licence
 

@@ -2,7 +2,7 @@
 /*
 * Plugin Name: Embed Github
 * Plugin URI: https://github.com/johnie/embedgithub
-* Description: Simply embed Github Readme or Changelog to page or post
+* Description: Simply embed Github Readme or any other markdown file to page or post
 * Version: 0.0.1
 * Author: Johnie Hjelm
 * Author URI: http://johnie.se
