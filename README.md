@@ -24,7 +24,7 @@ This is useful for removing titles since your page/post will most likely already
 
 You can also specify a markdown file using the **file** option, e.g. "changelog.md"
 
-`[embedgithub repo="johnie/embedgithub" trim="3" file="changelog.md"]`
+`[embedgithub repo="johnie/embedgithub" file="changelog.md"]`
 
 ## Licence
 
