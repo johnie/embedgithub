@@ -4,7 +4,7 @@
 
 ## Getting started
 
-Download the [latest zip](https://github.com/johnie/embedgithub/archive/master.zip) and upload it via the plugins page in WordPress or unzip it in the `plugins` directory.
+Download the [latest zip](https://github.com/johnie/embedgithub/archive/master.zip) and upload it via the plugins page in WordPress or unzip it in the `plugins` directory. It also has support for **Must Use Plugins**.
 
 You can also install it via `composer require johnie/embedgithub`
 
