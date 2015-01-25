@@ -61,7 +61,7 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
      * Current version of the plugin.
      * @var string
      */
-    protected $version = '0.0.1';
+    protected $version = '1.0.1';
 
     /**
      * Get github readme
