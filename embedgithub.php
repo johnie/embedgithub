@@ -73,14 +73,14 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
      */
     public function _eg_shortcode_readme( $atts ) {
 
-      extract( shortcode_atts( array(
+      shortcode_atts( array(
         'repo' => 'johnie/embedgithub',
         'trim' => 0
-      ), $atts ) );
+      ), $atts );
 
-      $transient="embedgithub_" . $repo . "_" . $trim;
+      $transient="embedgithub_" . $atts['repo'] . "_" . $atts['trim'];
       if ( false === ( $html = get_transient($transient) ) ) {
-        $url="https://api.github.com/repos/" . $repo . "/readme";
+        $url="https://api.github.com/repos/" . $atts['repo'] . "/readme";
 
         $ch = curl_init();
         $timeout = 5;
@@ -94,7 +94,7 @@ if ( ! class_exists( 'EmbedGithub' ) ) {
         $json=json_decode( $data );
         $markdown=base64_decode( $json->content );
         if ( $trim>0 ) {
-          $markdown = implode("\n", array_slice(explode("\n", $markdown), $trim));
+          $markdown = implode("\n", array_slice(explode("\n", $markdown), $atts['trim']));
         }
 
         $html = Markdown::defaultTransform( $markdown );
