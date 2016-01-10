@@ -1,6 +1,6 @@
-# Embed Github
+# Embed GitHub
 
-> Simply embed Github Readme or any other markdown file to page or post
+> Simply embed GitHub Readme or any other markdown file to page or post
 
 ## Getting started
 
