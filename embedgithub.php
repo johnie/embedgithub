@@ -1,17 +1,17 @@
 <?php
 
 /*
-* Plugin Name: Embed Github
+* Plugin Name: Embed GitHub
 * Plugin URI: https://github.com/johnie/embedgithub
-* Description: Simply embed Github Readme or any other markdown file to page or post
-* Version: 0.0.1
+* Description: Simply embed GitHub Readme or any other markdown file to page or post
+* Version: 1.0.0
 * Author: Johnie Hjelm
 * Author URI: http://johnie.se
 * License: MIT
 */
 
 /*
-Copyright 2015 Johnie Hjelm <johniehjelm@me.com> (http://johnie.se)
+Copyright 2015-2016 Johnie Hjelm <johniehjelm@me.com> (http://johnie.se)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -41,11 +41,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once __DIR__ . '/vendor/autoload.php';
 use \Michelf\Markdown;
 
-// If EmbedGitHub class exists don't create it.
-if ( class_exists( 'EmbedGitHub' ) ) {
-  return;
-}
-
 class EmbedGitHub {
 
   /**
@@ -60,7 +55,7 @@ class EmbedGitHub {
    *
    * @var string
    */
-  protected $name = 'Embed Github';
+  protected $name = 'Embed GitHub';
 
   /**
    * Current version of the plugin.
@@ -112,7 +107,6 @@ class EmbedGitHub {
     }
 
     return $html;
-
   }
 
   /**
