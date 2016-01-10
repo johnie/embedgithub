@@ -37,8 +37,11 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-// Require Michelf Markdown
-require_once __DIR__ . '/vendor/autoload.php';
+// Load Composer autoloader.
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
+
 use \Michelf\Markdown;
 
 // If EmbedGitHub class exists don't create it.
